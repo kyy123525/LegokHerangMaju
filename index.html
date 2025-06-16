@@ -20,49 +20,81 @@
     </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-        body {
-            font-family: 'Poppins', sans-serif;
-        }
-        .page-section {
-            display: none;
-        }
-        .page-section.active {
-            display: block;
-            animation: fadeIn 0.5s ease-in;
-        }
-        .tab-content {
-            display: none;
-        }
-        .tab-content.active {
-            display: block;
-        }
-        .slider {
-            position: relative;
-            height: 400px;
-            overflow: hidden;
-        }
-        .slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-            background-size: cover;
-            background-position: center;
-        }
-        .slide.active {
-            opacity: 1;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        #map {
-            height: 400px;
-            background-color: #f0f0f0;
-        }
+/* Tambahan responsif */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Responsive wrapper */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Slider responsive */
+.slider {
+    height: 300px;
+}
+@media (min-width: 768px) {
+    .slider {
+        height: 400px;
+    }
+}
+@media (min-width: 1024px) {
+    .slider {
+        height: 500px;
+    }
+}
+
+/* Responsive font sizes */
+h1, h2, h3, h4, h5 {
+    line-height: 1.2;
+}
+h1 {
+    font-size: 1.8rem;
+}
+@media (min-width: 768px) {
+    h1 {
+        font-size: 2.4rem;
+    }
+}
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+/* Responsive layout if needed */
+.flex-row {
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 768px) {
+    .flex-row {
+        flex-direction: row;
+        gap: 20px;
+    }
+}
+
+/* Map responsive */
+#map {
+    width: 100%;
+    height: 300px;
+}
+@media (min-width: 768px) {
+    #map {
+        height: 400px;
+    }
+}
+@media (min-width: 1024px) {
+    #map {
+        height: 500px;
+    }
+}
+
     </style>
 </head>
 <body class="bg-gray-50">
